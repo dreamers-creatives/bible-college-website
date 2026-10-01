@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#07141b;color:#f8f3ee;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#e4633f;text-decoration:none}a:hover{color:#f7ddd0}
+*{box-sizing:border-box}
+</style>
+<template id="__bundler_thumbnail" data-bg-color="#07141b"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="#07141b"></rect><text x="50" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#e4633f">DBC</text></svg></template>
+</helmet>
+
+<div style="font-family:Manrope,system-ui,sans-serif;background:#07141b;color:#f8f3ee;overflow:hidden">
+
+<!-- NAV -->
+<header style="position:absolute;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:24px clamp(20px,5vw,64px)">
+  <a href="#top" style="display:flex;align-items:center;gap:12px;color:#f8f3ee">
+    <img src="assets/dreamers-logo.svg" alt="Dreamer's" style="width:44px;height:44px;filter:brightness(0) invert(1)"></img>
+    <div style="display:flex;flex-direction:column;line-height:1">
+      <span style="font-weight:800;letter-spacing:.14em;font-size:15px">DREAMER'S</span>
+      <span style="font-weight:600;letter-spacing:.3em;font-size:10px;margin-top:4px;color:#f7ddd0">BIBLE COLLEGE</span>
+    </div>
+  </a>
+  <nav style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;font-size:12px;font-weight:700;letter-spacing:.14em">
+    <a href="#why" style="color:#f8f3ee">WHY DBC</a>
+    <a href="#programs" style="color:#f8f3ee">PROGRAMS</a>
+    <a href="#ministry" style="color:#f8f3ee">MINISTRY</a>
+    <a href="#tuition" style="color:#f8f3ee">TUITION</a>
+    <a href="#faq" style="color:#f8f3ee">FAQ</a>
+    <a href="https://dreamers.populiweb.com/router/admissions/onlineapplications/index?application_form=1" target="_blank" rel="noopener" style="background:#e4633f;color:#fff;padding:12px 22px;border-radius:999px" style-hover="background:#f7ddd0;color:#07141b">APPLY NOW</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="top" data-screen-label="Hero" style="position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:160px clamp(20px,5vw,64px) 80px">
+  <sc-if value="{{ hero0 }}" hint-placeholder-val="{{ true }}"><img src="assets/hero-worship.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img></sc-if>
+  <sc-if value="{{ hero1 }}" hint-placeholder-val="{{ false }}"><img src="assets/c6970.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img></sc-if>
+  <sc-if value="{{ hero2 }}" hint-placeholder-val="{{ false }}"><img src="assets/g1.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img></sc-if>
+  <img src="assets/c6891.jpg" alt="Dreamer's Bible College classroom" style="position:absolute;right:0;bottom:0;width:78%;height:80%;object-fit:cover;object-position:40% 55%;-webkit-mask-image:radial-gradient(ellipse 115% 120% at 100% 100%,#000 68%,transparent 100%);mask-image:radial-gradient(ellipse 115% 120% at 100% 100%,#000 68%,transparent 100%)"></img>
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,20,27,.88) 0%,rgba(7,20,27,.55) 40%,rgba(7,20,27,0) 70%),linear-gradient(180deg,rgba(7,20,27,.5) 0%,rgba(7,20,27,0) 25%)"></div>
+  <div style="position:relative;max-width:1100px;display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;gap:14px;font-size:12px;font-weight:800;letter-spacing:.24em;color:#f7ddd0">
+      <span style="width:36px;height:2px;background:#e4633f"></span>FALL 2026 · FULL-TIME &amp; PART-TIME
+    </div>
+    <h1 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;text-transform:uppercase;font-size:clamp(52px,9vw,136px);line-height:.92;letter-spacing:-.01em">Start the<br><span style="font-family:'Mrs Saint Delafield',cursive;text-transform:none;color:#e4633f;font-size:1.25em;line-height:.6;display:inline-block;padding:.12em .1em 0 0">adventure</span></h1>
+    <p style="margin:0;max-width:620px;font-size:clamp(17px,1.6vw,20px);line-height:1.6;color:#e9e2dc;text-wrap:pretty">What if the next season of your life was more than just college credits? What if it was a life-changing adventure with God?</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="https://dreamers.populiweb.com/router/admissions/onlineapplications/index?application_form=1" target="_blank" rel="noopener" style="background:#e4633f;color:#fff;padding:18px 32px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" style-hover="background:#f7ddd0;color:#07141b">APPLY NOW</a>
+      <a href="#programs" style="border:1.5px solid rgba(248,243,238,.6);color:#f8f3ee;padding:18px 32px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" style-hover="background:#f8f3ee;color:#07141b">EXPLORE PROGRAMS</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section data-screen-label="Intro" style="background:#f8f3ee;color:#0b1d26;padding:clamp(72px,10vw,140px) clamp(20px,5vw,64px)">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,96px);align-items:center">
+    <div style="display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:1/1;max-width:540px;width:100%">
+      <div style="grid-row:span 2;border-radius:999px 999px 20px 20px;overflow:hidden"><img src="assets/ezra-smile.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:45% 50%"></img></div>
+      <div style="border-radius:20px;overflow:hidden"><img src="assets/trip-2025.png" alt="Students on the 2025 trip" style="width:100%;height:100%;object-fit:cover;object-position:50% 45%"></img></div>
+      <div style="border-radius:20px 20px 999px 20px;overflow:hidden"><img src="assets/two-girls-smile.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 40%"></img></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(36px,4.6vw,64px);line-height:1;text-transform:uppercase">A launchpad<br>for your purpose</h2>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#33434b;text-wrap:pretty">Dreamer’s Bible College is designed to help you grow deeper in your faith, learn the Bible, discover your calling, and become the leader God created you to be. Whether you feel called to ministry, leadership, or simply want to build your life on a stronger foundation, this is a place where your faith can come alive.</p>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#33434b;text-wrap:pretty">You will study Scripture, serve in the local church, build lifelong friendships, and experience <strong style="color:#0b1d26">two unforgettable trips within the United States</strong>, all while earning your Bible College degree.</p>
+      <p style="margin:0;font-family:'DM Serif Display',serif;font-size:24px;line-height:1.35;color:#e4633f">Come grow with us, serve with us, and take a bold step into the future God has for you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" data-screen-label="Why DBC" style="background:#0b1d26;padding:clamp(72px,10vw,140px) clamp(20px,5vw,64px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:56px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px;align-items:end">
+      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(40px,5.5vw,80px);line-height:.95;text-transform:uppercase">Why<br>Dreamer’s<br><span style="color:#e4633f">Bible College?</span></h2>
+      <div style="display:flex;flex-direction:column;gap:16px;font-size:18px;line-height:1.7;color:#c9d2d6">
+        <p style="margin:0;color:#f8f3ee;font-weight:600">You do not have to choose between biblical depth and real-world ministry experience. At Dreamer’s Bible College, you receive both.</p>
+        <p style="margin:0;text-wrap:pretty">Here, your faith is strengthened through Scripture. Your leadership is developed through service. Your calling is shaped through community, mentorship, and the life of a thriving local church.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1px;background:rgba(248,243,238,.14);border:1px solid rgba(248,243,238,.14);border-radius:24px;overflow:hidden">
+      <sc-for list="{{ features }}" as="f" hint-placeholder-count="6">
+        <div style="background:#0b1d26;padding:40px 36px;display:flex;flex-direction:column;gap:16px;min-height:260px" style-hover="background:#10262f">
+          <span style="font-family:'DM Serif Display',serif;font-size:20px;color:#e4633f">{{ f.n }}</span>
+          <h3 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:28px;line-height:1.1">{{ f.t }}</h3>
+          <p style="margin:0;font-size:16px;line-height:1.65;color:#b9c4c9">{{ f.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" data-screen-label="Programs" style="background:#f7ddd0;color:#0b1d26;padding:clamp(72px,10vw,140px) clamp(20px,5vw,64px)">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(40px,6vw,96px)">
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="font-size:12px;font-weight:800;letter-spacing:.24em;color:#c24a28">PROGRAMS</div>
+      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(38px,5vw,72px);line-height:.98;text-transform:uppercase">Designed for<br>your next step</h2>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#3b3431;text-wrap:pretty">Dreamer’s Bible College offers flexible pathways for students who want to grow in Scripture, ministry, leadership, and spiritual maturity.</p>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#3b3431;text-wrap:pretty">Whether you are just out of high school, already serving in church, exploring a call to ministry, or looking to deepen your biblical foundation, DBC gives you a practical way to be equipped without disconnecting from local church life.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+        <div style="flex:1;min-width:120px;background:#0b1d26;color:#f8f3ee;border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:4px"><span style="font-family:'DM Serif Display',serif;font-size:56px;line-height:1;color:#e4633f">1</span><span style="font-size:12px;font-weight:800;letter-spacing:.2em">YEAR</span></div>
+        <div style="flex:1;min-width:120px;background:#0b1d26;color:#f8f3ee;border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:4px"><span style="font-family:'DM Serif Display',serif;font-size:56px;line-height:1;color:#e4633f">2</span><span style="font-size:12px;font-weight:800;letter-spacing:.2em">YEARS</span></div>
+        <div style="flex:1;min-width:120px;background:#0b1d26;color:#f8f3ee;border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:4px"><span style="font-family:'DM Serif Display',serif;font-size:56px;line-height:1;color:#e4633f">4</span><span style="font-size:12px;font-weight:800;letter-spacing:.2em">YEARS</span></div>
+      </div>
+    </div>
+    <div style="background:#f8f3ee;border-radius:28px;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:8px;align-self:start">
+      <h3 style="margin:0 0 12px;font-family:'DM Serif Display',serif;font-weight:400;font-size:30px">Program Highlights</h3>
+      <sc-for list="{{ highlights }}" as="h" hint-placeholder-count="7">
+        <div style="display:flex;gap:16px;align-items:baseline;padding:14px 0;border-top:1px solid rgba(11,29,38,.12);font-size:17px;line-height:1.5;font-weight:600">
+          <span style="width:8px;height:8px;border-radius:50%;background:#e4633f;flex:none;transform:translateY(-2px)"></span>{{ h }}
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMICS -->
+<section data-screen-label="Rooted in the Word" style="position:relative;padding:clamp(72px,10vw,140px) clamp(20px,5vw,64px)">
+  <img src="assets/c6970.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img>
+  <div style="position:absolute;inset:0;background:rgba(7,20,27,.86)"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:20px;max-width:780px">
+      <div style="font-size:12px;font-weight:800;letter-spacing:.24em;color:#f7ddd0">BIBLICAL FOUNDATION · ACADEMICS</div>
+      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(48px,7vw,104px);line-height:.92;text-transform:uppercase">Rooted in<br><span style="color:#e4633f">the Word</span></h2>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#d3dbde;text-wrap:pretty">A strong calling needs a strong foundation. At Dreamer’s Bible College, students are equipped to study Scripture, understand biblical truth, think theologically, and apply the Word of God to life and leadership.</p>
+      <p style="margin:0;font-family:'DM Serif Display',serif;font-size:24px;line-height:1.35;color:#f7ddd0">Academics at DBC are designed to form more than knowledge. They are designed to shape conviction, character, and spiritual maturity.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px">
+      <sc-for list="{{ academics }}" as="a" hint-placeholder-count="8">
+        <div style="border:1px solid rgba(248,243,238,.22);border-radius:999px;padding:18px 26px;font-weight:700;font-size:15px;letter-spacing:.02em;background:rgba(7,20,27,.4)">{{ a }}</div>
+      </sc-for>
+    </div>
+    <div style="display:flex">
+      <a href="https://www.dropbox.com/scl/fi/uy9fwndfzv661zw66yo0e/DCB-Sched-Fall-2026.pdf?rlkey=l18wq74l8btwft4iby7y3921n&amp;st=ao4nk01e&amp;dl=0" target="_blank" style="background:#f8f3ee;color:#07141b;padding:18px 32px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" style-hover="background:#e4633f;color:#fff">VIEW SEMESTER OVERVIEW →</a>
+    </div>
+  </div>
+</section>
+
+<!-- MINISTRY -->
+<section id="ministry" data-screen-label="Ministry Focus" style="background:#f8f3ee;color:#0b1d26;padding:clamp(72px,10vw,140px) clamp(20px,5vw,64px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px;align-items:end">
+      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(40px,5.5vw,80px);line-height:.95;text-transform:uppercase">Ministry<br><span style="color:#e4633f">Focus</span></h2>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#33434b;text-wrap:pretty">Calling becomes clearer when you start serving. At Dreamer’s Bible College, students can grow through ministry focuses that connect classroom learning with real church leadership.</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <sc-for list="{{ ministries }}" as="m" hint-placeholder-count="4">
+        <button onClick="{{ m.select }}" style="font-family:Manrope,sans-serif;cursor:pointer;border:1.5px solid #0b1d26;background:{{ m.bg }};color:{{ m.fg }};padding:16px 30px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.18em">{{ m.label }}</button>
+      </sc-for>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));background:#0b1d26;color:#f8f3ee;border-radius:32px;overflow:hidden">
+      <div style="aspect-ratio:4/3;min-height:100%;position:relative">
+        <sc-if value="{{ min0 }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;background:#0b1d26">
+          <div style="overflow:hidden"><img src="assets/cr-worship.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:40% 40%"></img></div>
+          <div style="overflow:hidden"><img src="assets/cr-camera.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:60% 45%"></img></div>
+          <div style="overflow:hidden"><img src="assets/cr-production.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:45% 55%"></img></div>
+          <div style="overflow:hidden"><img src="assets/cr-translation.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:40% 50%"></img></div>
+        </div></sc-if>
+        <sc-if value="{{ min1 }}" hint-placeholder-val="{{ false }}"><img src="assets/min-youth.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%"></img></sc-if>
+        <sc-if value="{{ min2 }}" hint-placeholder-val="{{ false }}"><img src="assets/min-worship.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img></sc-if>
+        <sc-if value="{{ min3 }}" hint-placeholder-val="{{ false }}"><img src="assets/min-kids.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img></sc-if>
+      </div>
+      <div style="padding:clamp(32px,5vw,64px);display:flex;flex-direction:column;justify-content:center;gap:20px">
+        <span style="font-size:12px;font-weight:800;letter-spacing:.24em;color:#f7ddd0">{{ active.num }} / 04</span>
+        <h3 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(44px,5vw,72px);line-height:1;text-transform:uppercase">{{ active.title }}</h3>
+        <p style="margin:0;font-size:18px;line-height:1.7;color:#c9d2d6;text-wrap:pretty">{{ active.d }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TUITION -->
+<section id="tuition" data-screen-label="Tuition" style="background:#0b1d26;padding:clamp(72px,10vw,140px) clamp(20px,5vw,64px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:56px">
+    <div style="display:flex;flex-direction:column;gap:20px;max-width:760px">
+      <div style="font-size:12px;font-weight:800;letter-spacing:.24em;color:#f7ddd0">TUITION &amp; SCHOLARSHIP</div>
+      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(40px,5.5vw,80px);line-height:.95;text-transform:uppercase">Tuition that supports <span style="color:#e4633f">your calling</span></h2>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#c9d2d6;text-wrap:pretty">Investing in your calling is a big step. We want to help you understand the cost clearly and explore options that may make Dreamer’s Bible College possible for you. Tuition details, payment options, and potential scholarship or financial assistance opportunities may be available depending on your pathway and enrollment status.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px">
+      <div style="background:#f8f3ee;color:#0b1d26;border-radius:28px;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <span style="font-size:13px;font-weight:800;letter-spacing:.2em">FULL-TIME</span>
+          <span style="font-size:12px;font-weight:700;background:#f7ddd0;padding:8px 14px;border-radius:999px">12–16 credit hours</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><span style="font-family:'DM Serif Display',serif;font-size:clamp(64px,7vw,96px);line-height:1">$2,800</span><span style="font-size:16px;font-weight:600;color:#55636a">/ semester flat rate</span></div>
+        <div style="display:flex;flex-direction:column;border-top:1px solid rgba(11,29,38,.14)">
+          <div style="padding:14px 0;border-bottom:1px solid rgba(11,29,38,.14);font-size:16px;line-height:1.5">Credits beyond 16 hours billed at <strong>$200</strong> per additional credit hour</div>
+          <div style="padding:14px 0;font-size:16px;line-height:1.5">All required textbooks and course materials included</div>
+        </div>
+      </div>
+      <div style="background:#e4633f;color:#fff;border-radius:28px;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <span style="font-size:13px;font-weight:800;letter-spacing:.2em">PART-TIME</span>
+          <span style="font-size:12px;font-weight:700;background:rgba(7,20,27,.18);padding:8px 14px;border-radius:999px">Up to 50% online</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><span style="font-family:'DM Serif Display',serif;font-size:clamp(64px,7vw,96px);line-height:1">$250</span><span style="font-size:16px;font-weight:600">/ credit hour</span></div>
+        <div style="display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.35)">
+          <div style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,.35);font-size:16px;line-height:1.5">At least 50% in-person class attendance; up to 50% online, subject to course availability and approval</div>
+          <div style="padding:14px 0;font-size:16px;line-height:1.5">All required textbooks and course materials included</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(248,243,238,.14);padding-top:32px">
+      <p style="margin:0;max-width:620px;font-size:17px;line-height:1.6;color:#c9d2d6">The best next step is to apply or request information and connect with our team. We will help you understand your options and answer your questions.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://dreamers.populiweb.com/router/admissions/onlineapplications/index?application_form=1" target="_blank" rel="noopener" style="background:#e4633f;color:#fff;padding:18px 32px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" style-hover="background:#f7ddd0;color:#07141b">APPLY NOW</a>
+        <a href="https://dreamers.populiweb.com/router/admissions/onlineapplications/index?application_form=2" target="_blank" rel="noopener" style="border:1.5px solid rgba(248,243,238,.6);color:#f8f3ee;padding:18px 32px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" style-hover="background:#f8f3ee;color:#07141b">ASK ABOUT SCHOLARSHIPS</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section data-screen-label="Community" style="background:#f7ddd0;color:#0b1d26;padding:clamp(72px,10vw,140px) clamp(20px,5vw,64px)">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(40px,6vw,96px);align-items:center">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="aspect-ratio:3/4;border-radius:999px 999px 20px 20px;overflow:hidden"><img src="assets/c6942.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></img></div>
+      <div style="aspect-ratio:3/4;border-radius:20px 20px 999px 999px;overflow:hidden;margin-top:48px"><img src="assets/community-students.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%"></img></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="font-size:12px;font-weight:800;letter-spacing:.24em;color:#c24a28">STUDENT LIFE</div>
+      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(38px,5vw,72px);line-height:.98;text-transform:uppercase">Be formed in community</h2>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#3b3431;text-wrap:pretty">Dreamer’s Bible College is not only about what you learn. It is also about who you become. Students grow in a community marked by worship, prayer, Scripture, service, friendship, and shared hunger for God.</p>
+      <p style="margin:0;font-family:'DM Serif Display',serif;font-size:24px;line-height:1.35;color:#0b1d26">A place to be known. A place to be challenged. A place to grow stronger with others moving in the same direction.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <sc-for list="{{ community }}" as="c" hint-placeholder-count="7">
+          <span style="background:#f8f3ee;padding:10px 16px;border-radius:999px;font-size:14px;font-weight:700">{{ c }}</span>
+        </sc-for>
+      </div>
+      <div style="display:flex"><a href="#contact" style="background:#0b1d26;color:#f8f3ee;padding:18px 32px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" style-hover="background:#e4633f;color:#fff">SCHEDULE A VISIT</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section data-screen-label="Testimonials" style="background:#07141b;padding:clamp(72px,10vw,140px) clamp(20px,5vw,64px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center">
+      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(40px,5.5vw,80px);line-height:.95;text-transform:uppercase">Every student<br>has a <span style="font-family:'Mrs Saint Delafield',cursive;text-transform:none;color:#e4633f;font-size:1.3em">story</span></h2>
+      <p style="margin:0;max-width:560px;font-size:18px;line-height:1.6;color:#c9d2d6">At Dreamer’s Bible College, students are growing in Scripture, confidence, leadership, and calling.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px">
+      <div style="aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:#0b1d26">
+        <iframe src="https://www.youtube.com/embed/JtyyrwmgUZs?si=r_whPs-AUFB9M8QX" referrerpolicy="strict-origin-when-cross-origin" title="Dreamer's Bible College student story" style="width:100%;height:100%;border:0;display:block" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true"></iframe>
+      </div>
+      <div style="aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:#0b1d26">
+        <iframe src="https://www.youtube.com/embed/F6JZxvEEWHE?si=25JJjXB37QQnjjeu" referrerpolicy="strict-origin-when-cross-origin" title="Dreamer's Bible College student story" style="width:100%;height:100%;border:0;display:block" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true"></iframe>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+      <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+        <figure style="margin:0;background:#0b1d26;border-radius:24px;padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:28px">
+          <blockquote style="margin:0;font-family:'DM Serif Display',serif;font-size:22px;line-height:1.4;color:#f8f3ee"><span style="color:#e4633f;font-size:48px;line-height:0;vertical-align:-.35em;margin-right:4px">“</span>{{ t.q }}</blockquote>
+          <figcaption style="font-size:12px;font-weight:800;letter-spacing:.18em;color:#f7ddd0">— {{ t.who }}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- PREVIEW DAY -->
+<section id="preview-day" data-screen-label="Preview Day" style="background:#e4633f;color:#fff;padding:clamp(72px,10vw,140px) clamp(20px,5vw,64px)">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,96px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="font-size:12px;font-weight:800;letter-spacing:.24em;color:#07141b">VISIT CAMPUS</div>
+      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(44px,6vw,88px);line-height:.95;text-transform:uppercase">Join us for a<br><span style="font-family:'Mrs Saint Delafield',cursive;text-transform:none;color:#07141b;font-size:1.3em;line-height:.8">Preview Day</span></h2>
+      <p style="margin:0;max-width:540px;font-size:19px;line-height:1.65;color:#fff;text-wrap:pretty">Come see what Bible college is really like. Meet the students, sit in on lectures, and experience a full day at Dreamer’s Bible College.</p>
+      <div style="display:flex"><a href="https://dreamers.populiweb.com/router/admissions/onlineinquiries/respond/1/be1aa670551ef7f7b08f9173b03d5261" target="_blank" rel="noopener" style="background:#07141b;color:#f8f3ee;padding:18px 36px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" style-hover="background:#f8f3ee;color:#07141b">LEARN MORE</a></div>
+    </div>
+    <div style="position:relative;display:flex;justify-content:center">
+      <div style="width:100%;max-width:520px;aspect-ratio:4/5;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1.3fr 1fr;gap:12px">
+        <div style="grid-column:span 2;border-radius:999px 999px 20px 20px;overflow:hidden"><img src="assets/pv-class.jpg" alt="Students in a Dreamer's Bible College lecture" style="width:100%;height:100%;object-fit:cover;object-position:55% 50%"></img></div>
+        <div style="border-radius:20px;overflow:hidden"><img src="assets/pv-carter.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:45% 30%"></img></div>
+        <div style="border-radius:20px 20px 999px 20px;overflow:hidden"><img src="assets/pv-pingpong.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:45% 50%"></img></div>
+      </div>
+      <div style="position:absolute;left:-12px;top:44%;background:#f8f3ee;color:#07141b;border-radius:24px;padding:24px 28px;display:flex;flex-direction:column;gap:4px;box-shadow:0 20px 40px rgba(7,20,27,.25)">
+        <span style="font-size:11px;font-weight:800;letter-spacing:.22em;color:#c24a28">NEXT PREVIEW DAY</span>
+        <span style="font-family:'DM Serif Display',serif;font-size:56px;line-height:1">Nov 23</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" data-screen-label="FAQ" style="background:#f8f3ee;color:#0b1d26;padding:clamp(72px,10vw,140px) clamp(20px,5vw,64px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,96px);align-items:flex-start">
+    <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:24px">
+      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(44px,5.5vw,80px);line-height:.95;text-transform:uppercase">Questions?<br><span style="color:#e4633f">Start here.</span></h2>
+      <div style="display:flex"><a href="#contact" style="background:#0b1d26;color:#f8f3ee;padding:18px 32px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" style-hover="background:#e4633f;color:#fff">ASK A QUESTION</a></div>
+    </div>
+    <div style="display:flex;flex-direction:column;border-top:1.5px solid #0b1d26;flex:2 1 520px;min-width:0">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="11">
+        <div style="border-bottom:1px solid rgba(11,29,38,.18)">
+          <button onClick="{{ q.toggle }}" style="all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font-family:'DM Serif Display',serif;font-size:clamp(20px,2vw,24px);line-height:1.25">
+            <span>{{ q.q }}</span>
+            <span style="flex:none;width:36px;height:36px;border-radius:50%;border:1.5px solid #0b1d26;display:flex;align-items:center;justify-content:center;font-family:Manrope,sans-serif;font-size:18px;background:{{ q.iconBg }};color:{{ q.iconFg }}">{{ q.icon }}</span>
+          </button>
+          <sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:0;padding:0 56px 26px 0;font-size:17px;line-height:1.7;color:#33434b;text-wrap:pretty">{{ q.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="apply" data-screen-label="Apply CTA" style="position:relative;padding:clamp(96px,12vw,180px) clamp(20px,5vw,64px);text-align:center">
+  <img src="assets/c6708.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img>
+  <div style="position:absolute;inset:0;background:rgba(7,20,27,.8)"></div>
+  <div style="position:relative;max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:28px">
+    <img src="assets/dreamers-logo.svg" alt="" style="width:64px;height:64px;filter:brightness(0) invert(1)"></img>
+    <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(48px,7.5vw,112px);line-height:.92;text-transform:uppercase">Ready to<br><span style="font-family:'Mrs Saint Delafield',cursive;text-transform:none;color:#e4633f;font-size:1.3em;line-height:.8">dream</span><br>bigger?</h2>
+    <p style="margin:0;max-width:600px;font-size:18px;line-height:1.7;color:#d3dbde">Start by completing the application or requesting information. Our team will help you understand the next steps.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a href="https://dreamers.populiweb.com/router/admissions/onlineapplications/index?application_form=1" target="_blank" rel="noopener" style="background:#e4633f;color:#fff;padding:18px 36px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" style-hover="background:#f7ddd0;color:#07141b">APPLY NOW</a>
+      <a href="#contact" style="border:1.5px solid rgba(248,243,238,.6);color:#f8f3ee;padding:18px 36px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" style-hover="background:#f8f3ee;color:#07141b">REQUEST INFO</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" style="background:#07141b;border-top:1px solid rgba(248,243,238,.1);padding:64px clamp(20px,5vw,64px) 40px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:40px">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="assets/dreamers-logo.svg" alt="" style="width:44px;height:44px;filter:brightness(0) invert(1)"></img>
+        <div style="display:flex;flex-direction:column;line-height:1"><span style="font-weight:800;letter-spacing:.14em;font-size:15px">DREAMER'S</span><span style="font-weight:600;letter-spacing:.3em;font-size:10px;margin-top:4px;color:#f7ddd0">BIBLE COLLEGE</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.6;color:#c9d2d6">
+        <span style="font-size:12px;font-weight:800;letter-spacing:.2em;color:#f8f3ee">LOCATION</span>
+        <span>10700 Anderson Mill Rd<br>Austin, TX 78750</span>
+        <a href="tel:5125375871">(512) 537-5871</a>
+        <a href="mailto:admin@dreamers.church">admin@dreamers.church</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.6;color:#c9d2d6">
+        <span style="font-size:12px;font-weight:800;letter-spacing:.2em;color:#f8f3ee">DREAMER'S CHURCH</span>
+        <span>Sundays 9:30 &amp; 11:30 AM</span>
+        <span>Wednesday Youth 6:30 PM</span>
+        <a href="https://dreamerschurch.com/">dreamerschurch.com</a>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;letter-spacing:.1em;color:#7f9098;border-top:1px solid rgba(248,243,238,.1);padding-top:24px">
+      <span>© Dreamer’s Bible College · A ministry of Dreamer’s Church</span>
+      <div style="display:flex;gap:20px"><a href="https://www.instagram.com/dreamerschurchatx/">INSTAGRAM</a><a href="https://www.facebook.com/dreamerschurchatx">FACEBOOK</a><a href="http://youtube.com/c/dreamerschurch">YOUTUBE</a></div>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroImage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Worship&quot;,&quot;Crowd&quot;,&quot;Preaching&quot;],&quot;default&quot;:&quot;Worship&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;faqMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;single&quot;,&quot;multiple&quot;],&quot;default&quot;:&quot;single&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const FEATURES=[
+["Grow Deep in Scripture","Build a strong biblical foundation that shapes how you think, lead, serve, and live."],
+["Be Formed in Community","Learn alongside other students who are hungry for God, serious about growth, and committed to the local church."],
+["Get Hands-On Ministry Experience","Serve in real ministry environments, develop practical leadership skills, and learn from pastors and leaders in the life of Dreamer’s Church."],
+["Discover Your Calling","Create space to hear from God, grow in confidence, and take intentional steps toward the future He is building in you."],
+["Choose a Pathway That Fits","Full-time and part-time options make it possible to grow at the pace that fits your life."],
+["Prepare for Kingdom Impact","Whether you are called to vocational ministry, marketplace leadership, or deeper discipleship, DBC helps you build a life that carries purpose."]];
+const MIN=[
+["Creative","h1.webp","Develop your voice in storytelling, media, design, production, communication, and creative leadership. Learn how excellence, clarity, and creativity can serve the mission of the church."],
+["Youth","g2.webp","Be equipped to lead, disciple, and reach the next generation. Learn how to communicate the gospel, build healthy relationships, create ministry environments, and help students follow Jesus with boldness."],
+["Worship","h2.webp","Grow as a worshipper, musician, vocalist, or worship leader with a heart for God’s presence and the local church. Develop both spiritual depth and practical skill for leading people in worship."],
+["Kids","h1.webp","Learn how to disciple children with joy, safety, creativity, and biblical clarity. Be trained to build environments where kids encounter Jesus, love the Word, and feel at home in church."]];
+const FAQ=[
+["Who is Dreamer’s Bible College for?","DBC is for high school graduates, young adults, church members, emerging leaders, and adults who want to grow in Scripture, calling, leadership, and practical ministry."],
+["Do I have to feel called to vocational ministry to attend?","No. Some students are preparing for vocational ministry, while others want to deepen their faith, grow in leadership, and become stronger followers of Jesus in every area of life."],
+["Where is Dreamer’s Bible College located?","Dreamer’s Bible College is located in Austin, Texas and connected to the life and ministry of Dreamer’s Church."],
+["Are there full-time and part-time options?","Yes. DBC offers full-time and part-time options so students can choose a pathway that fits their stage of life and level of availability."],
+["What program lengths are available?","Students can explore 1-year, 2-year, and 4-year pathways depending on their goals, calling, and desired level of training."],
+["What ministry focuses are available?","Current ministry focuses include Creative, Youth, Worship, and Kids."],
+["Will I get hands-on ministry experience?","Yes. Hands-on ministry experience is a core part of Dreamer’s Bible College. Students learn in the classroom and grow through serving in real ministry environments."],
+["Is this connected to Dreamer’s Church?","Yes. DBC is church-integrated, which means students are formed through Scripture, community, leadership, and the practical ministry life of Dreamer’s Church."],
+["Are scholarships or financial help available?","Scholarships or financial assistance are available. The best next step is to request tuition information and speak with the admissions team."],
+["Can parents schedule a visit or ask questions?","Yes. Parents are welcome to ask questions, request information, and join students for a visit or preview experience."],
+["How do I apply?","Start by completing the application or requesting information. Our team will help you understand the next steps."]];
+class Component extends DCLogic {
+  state={min:0,open:[0]};
+  toggle(i){const multi=(this.props.faqMode??'single')==='multiple';this.setState(s=>{const o=s.open.includes(i);return{open:o?s.open.filter(x=>x!==i):(multi?[...s.open,i]:[i])}})}
+  renderVals(){
+    const m=MIN[this.state.min];
+    return{
+      ...(()=>{const i=['Worship','Crowd','Preaching'].indexOf(this.props.heroImage??'Worship');return{hero0:i<=0,hero1:i===1,hero2:i===2}})(),
+      min0:this.state.min===0,min1:this.state.min===1,min2:this.state.min===2,min3:this.state.min===3,
+      features:FEATURES.map(([t,d],i)=>({t,d,n:'0'+(i+1)})),
+      highlights:["1-year, 2-year, and 4-year pathways","Full-time and part-time enrollment options","Biblical teaching and leadership development","Hands-on ministry experience at Dreamer’s Church","Ministry focuses in Creative, Youth, Worship, and Kids","Community, mentorship, and spiritual formation","Located in Austin, Texas"],
+      academics:["Biblical literacy","Theology and doctrine","Spiritual formation","Leadership development","Ministry practice","Communication and discipleship","Local church health","Personal calling and character"],
+      ministries:MIN.map(([l],i)=>{const a=i===this.state.min;return{label:l.toUpperCase(),bg:a?'#0b1d26':'transparent',fg:a?'#f8f3ee':'#0b1d26',select:()=>this.setState({min:i})}}),
+      active:{title:m[0],img:'assets/'+m[1],d:m[2],num:'0'+(this.state.min+1)},
+      community:["Spiritual formation","Worship and prayer culture","Mentorship from leaders","Ministry teams and serving","Friendships with purpose","Connection to Dreamer’s Church","Austin-based experiences"],
+      testimonials:[
+        {q:"DBC helped me take my faith seriously. I didn’t just learn more about God — I learned how to follow Him with my whole life.",who:"Chris, 1st-Year Student"},
+        {q:"I came in unsure of what was next. Through community, classes, and serving, I gained clarity and confidence in my calling.",who:"Hailey, 2nd-Year Student"},
+        {q:"As a parent, I wanted my student in an environment that was spiritually healthy and practically helpful. DBC has been both.",who:"Lora, Parent"}],
+      faqs:FAQ.map(([q,a],i)=>{const o=this.state.open.includes(i);return{q,a,open:o,icon:o?'–':'+',iconBg:o?'#e4633f':'transparent',iconFg:o?'#fff':'#0b1d26',toggle:()=>this.toggle(i)}})
+    };
+  }
+}
+</script>
+</body>
+</html>
