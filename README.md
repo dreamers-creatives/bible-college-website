@@ -4,7 +4,7 @@
 Single-page site for Dreamer's Bible College (Austin, TX), a ministry of Dreamer's Church. Goals: applications, scholarship applications, Preview Day sign-ups. Visual language follows dreamerschurch.com.
 
 ## About the Design Files
-`Dreamers Bible College - Standalone.html` is a **design reference** — open it in any browser to see exact look and behavior. Rebuild it natively in Framer (Stacks/Frames, CMS optional) rather than pasting the HTML. `Dreamers Bible College (source).dc.html` is the editable source (not runnable on its own).
+`index.html` (the bundled standalone build, served at `/` on Vercel) is a **design reference** — open it in any browser to see exact look and behavior. Rebuild it natively in Framer (Stacks/Frames, CMS optional) rather than pasting the HTML. `Dreamers Bible College (source).dc.html` is the editable source (not runnable on its own).
 
 ## Fidelity
 **High-fidelity.** Final colors, type, copy, imagery, interactions.
