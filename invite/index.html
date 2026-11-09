@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invite Someone | Dreamer's Bible College</title>
+<meta name="description" content="Create a personal invitation QR code with a prewritten text and a link to your event details.">
+<!-- Hidden page: keep it out of search results and previews. -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="theme-color" content="#07141b">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/invite/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Dreamer's Bible College home">
+    <img src="/assets/dreamers-logo.svg" alt="" width="44" height="44">
+    <span class="brand-text">
+      <span class="brand-name">DREAMER'S</span>
+      <span class="brand-sub">BIBLE COLLEGE</span>
+    </span>
+  </a>
+  <span class="tag">INVITE TOOL</span>
+</header>
+
+<main>
+  <section class="intro">
+    <p class="eyebrow">ONE FRIEND. ONE INVITATION.</p>
+    <h1>Make room for <em>someone new.</em></h1>
+    <p class="lede">Give your church a QR code that prepares a personal text. They choose a friend, make it their own, and send.</p>
+  </section>
+
+  <noscript><p class="noscript">This tool needs JavaScript to build your QR code.</p></noscript>
+
+  <div class="workspace">
+
+    <!-- STEP 1 -->
+    <section class="card editor" aria-labelledby="step1">
+      <h2 class="step" id="step1"><b>01</b> <span>Write your invitation</span></h2>
+
+      <label for="host">Church or host name</label>
+      <input id="host" type="text" placeholder="Dreamer's Bible College" maxlength="90" autocomplete="off">
+
+      <label for="event">What are you inviting them to?</label>
+      <input id="event" type="text" placeholder="Preview Day" maxlength="80" autocomplete="off">
+      <p class="hint">Finishes the sentence &ldquo;Hey, are you free for &hellip;?&rdquo; Try &ldquo;Preview Day,&rdquo; &ldquo;church this Sunday,&rdquo; or &ldquo;our Christmas Eve service.&rdquo;</p>
+
+      <div class="two">
+        <div>
+          <label for="date">Date</label>
+          <input id="date" type="text" placeholder="Sunday, December 20th" maxlength="60" autocomplete="off">
+        </div>
+        <div>
+          <label for="time">Time</label>
+          <input id="time" type="text" placeholder="10 AM" maxlength="50" autocomplete="off">
+        </div>
+      </div>
+      <p class="hint">Use a date like 12/20/2026 or December 20th. Numeric dates use month/day/year. Without a year, we use the next occurrence.</p>
+
+      <label for="link">Event details link</label>
+      <input id="link" type="url" inputmode="url" placeholder="https://dreamerschurch.com" autocomplete="off" autocapitalize="off" spellcheck="false">
+      <p class="hint">Paste a public link with your event details: an event page, a landing page, or a social post.</p>
+
+      <button id="draft" class="btn secondary" type="button">Build my message</button>
+
+      <label for="message">Invitation text <span id="count" aria-live="off">0 characters</span></label>
+      <textarea id="message" rows="8" maxlength="700">Hey, are you free for [event]? I’d love for you to come to [church or host name] with me!
+
+It’s [date] at [time]. We can meet out front and go in together!
+
+Here’s some more info:
+[event link]</textarea>
+      <p class="hint">Your message is ready to send. Just choose a friend in Messages.</p>
+
+      <button id="generate" class="btn primary wide" type="button"><span>Create my QR code</span> <span aria-hidden="true">&nearr;</span></button>
+      <p id="error" class="error" role="alert"></p>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="card result" id="result" aria-labelledby="step2">
+      <h2 class="step" id="step2"><b>02</b> <span>Put the invitation in their hands</span></h2>
+
+      <div id="empty" class="empty">
+        <div class="arrow" aria-hidden="true">&nearr;</div>
+        <h3>Your next invitation<br>starts here.</h3>
+        <p>Fill in your details and create a QR code. No sign-up. No contact list. No automatic messages.</p>
+      </div>
+
+      <div id="ready" hidden>
+        <div id="qr" class="qr" role="img" aria-label="QR code containing your invitation"></div>
+        <h3>Invite someone<br>to sit with you.</h3>
+        <p>Open your iPhone Camera, scan, and tap the message prompt. Choose a friend, personalize the text, then send.</p>
+        <div class="buttons">
+          <button id="png" class="btn primary" type="button">Download QR Code</button>
+        </div>
+        <details>
+          <summary>Preview the text</summary>
+          <p id="preview" class="preview"></p>
+        </details>
+      </div>
+
+      <p class="testing">Before Sunday: scan your downloaded QR on an iPhone and confirm the full message and event details link appear. Compatibility varies by iOS version.</p>
+      <p id="status" class="status" role="status"></p>
+    </section>
+  </div>
+
+  <section class="how" aria-label="How it works">
+    <div><h3>1. Scan the code</h3><p>Use the iPhone Camera and tap the prompt.</p></div>
+    <div><h3>2. Pick a friend</h3><p>The recipient is blank. Choose someone you know.</p></div>
+    <div><h3>3. Make it personal</h3><p>Review the invitation and press Send.</p></div>
+  </section>
+
+  <footer class="site-footer">
+    <span>Made for Dreamer&rsquo;s Bible College &amp; Dreamer&rsquo;s Church.</span>
+    <span>Your invitation is generated in your browser.</span>
+  </footer>
+</main>
+
+<script src="/invite/vendor/qrcode.js"></script>
+<script src="/invite/date.js"></script>
+<script src="/invite/app.js"></script>
+</body>
+</html>
