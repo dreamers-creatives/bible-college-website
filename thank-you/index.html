@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<!-- Google tag (Google Ads): AW-621697054 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-621697054"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-621697054');
+
+// Populi's Preview Day form redirects here with ?type=preview-day after a submission.
+// Count it once per browser session so refreshes don't add extra conversions.
+(function(){
+  var type = new URLSearchParams(location.search).get('type');
+  if (type !== 'preview-day') return;
+  try { if (sessionStorage.getItem('dbc_pd_conv')) return; sessionStorage.setItem('dbc_pd_conv', '1'); } catch (e) {}
+  gtag('event', 'conversion', { 'send_to': 'AW-621697054/g_MLCNHq3bYdEJ6wuagC' });
+})();
+</script>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2473775770056552');
+fbq('track', 'PageView');
+if (new URLSearchParams(location.search).get('type') === 'preview-day') fbq('track', 'CompleteRegistration', { content_name: 'Preview Day' });
+</script>
+<title>Thank You | Dreamer's Bible College</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#07141b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:#07141b;color:#f8f3ee;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#e4633f;text-decoration:none}
+header{padding:24px clamp(20px,5vw,64px)}
+.brand{display:inline-flex;align-items:center;gap:12px;color:#f8f3ee}
+.brand img{width:44px;height:44px;filter:brightness(0) invert(1)}
+.brand b{display:block;font-weight:800;letter-spacing:.14em;font-size:15px;line-height:1}
+.brand small{display:block;font-weight:600;letter-spacing:.3em;font-size:10px;margin-top:4px;color:#f7ddd0;line-height:1}
+main{flex:1;display:flex;align-items:center;padding:48px clamp(20px,5vw,64px)}
+.box{max-width:720px;margin:0 auto;text-align:center}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.24em;color:#e4633f}
+h1{margin:16px 0 20px;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(44px,7vw,96px);line-height:.95;text-transform:uppercase}
+h1 span{font-family:'Mrs Saint Delafield',cursive;text-transform:none;color:#e4633f;font-size:1.25em;line-height:.6}
+p{font-size:19px;line-height:1.65;margin:0 auto 32px;max-width:560px;color:#d3dbde}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{background:#e4633f;color:#fff;padding:18px 32px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em}
+.btn.alt{background:transparent;border:1.5px solid rgba(248,243,238,.4);color:#f8f3ee}
+.btn:hover{background:#f7ddd0;color:#07141b}
+footer{border-top:1px solid rgba(248,243,238,.1);padding:32px clamp(20px,5vw,64px);font-size:14px;color:#c9c2bb;text-align:center}
+footer a{color:#f8f3ee}
+</style>
+</head>
+<body>
+<header><a class="brand" href="/"><img src="/assets/dreamers-logo.svg" alt="Dreamer's"><span><b>DREAMER'S</b><small>BIBLE COLLEGE</small></span></a></header>
+<main>
+  <div class="box">
+    <div class="eyebrow">YOU'RE REGISTERED</div>
+    <h1>See you<br><span>soon</span></h1>
+    <p>Thanks for signing up for Preview Day on Monday, November 23. Our team will be in touch with the details. We can't wait to meet you.</p>
+    <div class="btns">
+      <a class="btn" href="https://dreamers.populiweb.com/router/admissions/onlineapplications/index?application_form=1" target="_blank" rel="noopener">START YOUR APPLICATION</a>
+      <a class="btn alt" href="/">BACK TO HOME</a>
+    </div>
+  </div>
+</main>
+<footer>Questions? <a href="tel:5125375871">(512) 537-5871</a> · <a href="mailto:admin@dreamers.church">admin@dreamers.church</a> · <a href="/privacy/">Privacy policy</a></footer>
+</body>
+</html>
