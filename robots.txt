@@ -1,3 +1,25 @@
+# Dreamer's Bible College
+# Search engines and AI assistants are welcome to crawl and cite this site.
+
 User-agent: *
 Allow: /
+
+# AI search and answer engines (explicitly allowed)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: CCBot
+User-agent: meta-externalagent
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://www.dreamersbiblecollege.com/sitemap.xml
+# Plain-language summary for AI assistants: https://www.dreamersbiblecollege.com/llms.txt
