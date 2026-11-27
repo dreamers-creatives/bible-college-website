@@ -721,17 +721,12 @@ document.addEventListener('click', function (e) {
     <button data-act="close" aria-label="Close" style="position:absolute;top:16px;right:16px;z-index:2;width:40px;height:40px;border-radius:50%;border:none;background:#07141b;color:#f8f3ee;font-size:20px;cursor:pointer">×</button>
     <div style="position:relative;min-height:260px;background:#0b1d26">
       <img src="/assets/pv-class.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" alt="" loading="lazy" decoding="async">
-      <div style="position:absolute;left:20px;bottom:20px;background:#f8f3ee;color:#07141b;border-radius:20px;padding:16px 22px;display:flex;flex-direction:column;align-items:center;line-height:1">
-        <span style="font-size:11px;font-weight:800;letter-spacing:.22em;color:#c24a28">NOV</span>
-        <span style="font-family:'DM Serif Display',serif;font-size:52px">23</span>
-      </div>
     </div>
     <div style="padding:clamp(28px,5vw,48px);display:flex;flex-direction:column;gap:18px;justify-content:center">
-      <span style="font-size:12px;font-weight:800;letter-spacing:.24em;color:#07141b;align-self:flex-start;margin-right:48px">VISIT CAMPUS</span>
-      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(34px,4.4vw,52px);line-height:.98;text-transform:uppercase">Would you like to join us for a<br><span style="font-family:'DM Serif Display',serif;font-style:italic;text-transform:none;color:#07141b;font-size:1.12em;line-height:1">Preview Day?</span></h2>
-      <p style="margin:0;font-size:17px;line-height:1.6">Meet the students, sit in on lectures, and experience a full day at Dreamer’s Bible College.</p>
+      <span style="font-size:12px;font-weight:800;letter-spacing:.24em;color:#07141b;align-self:flex-start;margin-right:48px">SCHOLARSHIPS</span>
+      <h2 style="margin:0;font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(34px,4.4vw,52px);line-height:.98;text-transform:uppercase">See if you qualify for a<br><span style="font-family:'DM Serif Display',serif;font-style:italic;text-transform:none;color:#07141b;font-size:1.12em;line-height:1">partial scholarship</span><br>in minutes</h2>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px">
-        <a href="https://dreamers.populiweb.com/router/forms/respond/3/5b22e8610b3b38198a184109ddc81750" target="_blank" rel="noopener" data-act="close" style="background:#07141b;color:#f8f3ee;padding:16px 28px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" class="h18">YES, SAVE MY SPOT</a>
+        <a href="https://dreamers.populiweb.com/router/admissions/onlineapplications/index?application_form=2" target="_blank" rel="noopener" data-act="close" style="background:#07141b;color:#f8f3ee;padding:16px 28px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.16em" class="h18">LEARN MORE</a>
         <button data-act="close" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.7);padding:16px 28px;border-radius:999px;font-family:inherit;font-weight:800;font-size:13px;letter-spacing:.16em;cursor:pointer">MAYBE LATER</button>
       </div>
     </div>
@@ -742,8 +737,8 @@ document.addEventListener('click', function (e) {
 
 <script>
 (function(){var P=document.getElementById('dbc-popup');
-function closeP(){if(P)P.hidden=true;try{sessionStorage.setItem('dbcPreviewSeen','1')}catch(e){}}
-try{if(P&&!sessionStorage.getItem('dbcPreviewSeen'))setTimeout(function(){P.hidden=false},6000)}catch(e){}
+function closeP(){if(P)P.hidden=true;try{sessionStorage.setItem('dbcScholarshipSeen','1')}catch(e){}}
+try{if(P&&!sessionStorage.getItem('dbcScholarshipSeen'))setTimeout(function(){P.hidden=false},6000)}catch(e){}
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&P&&!P.hidden)closeP()});
 document.addEventListener('click',function(e){var t=e.target.closest('[data-act]');if(!t)return;var p=t.getAttribute('data-act').split(':'),a=p[0],i=p[1];
 if(a==='close')closeP();
